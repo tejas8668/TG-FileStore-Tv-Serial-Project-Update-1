@@ -1,0 +1,64 @@
+{
+    "name": "File Store Bot",
+    "description": "A Telegram Files Store Bot to protect your Files in Pyrogram by @MrAbhi2k3 as Shortener",
+    "keywords": [
+        "telegram",
+        "files",
+        "store",
+        "bot"
+    ],
+    "repository": "https://github.com/PredatorHackerzZ/TG-FileStore",
+    "website": "https://telegram.me/TeleRoidGroup",
+    "success_url": "https://t.me/TeleRoidGroup",
+    "logo": "https://telegra.ph/file/b39906f572822b3ab82c8.jpg",
+    "env": {
+        "API_ID": {
+            "description": "Get this value from my.telegram.org"
+        },
+        "API_HASH": {
+            "description": "Get this value from my.telegram.org"
+        },
+        "BOT_TOKEN": {
+            "description": "Get this from @BotFather the Official Bot"
+        },
+        "BOT_USERNAME": {
+            "description": "Your Bot Username which you sent to @BotFather (Without [@])"
+        },
+        "DB_CHANNEL": {
+            "description": "The Channel ID which will be used as Database. Example: -100123456789"
+        },
+        "BOT_OWNER": {
+            "description": "Bot Owner UserID"
+        },
+        "DATABASE_URL": {
+            "description": "MongoDB Database URI for Saving UserID for Broadcast."
+        },
+        "UPDATES_CHANNEL": {
+            "description": "ID of a Channel which you want to do Force Sub to use the bot. Example: -100123456789",
+            "required": false
+        },
+        "OTHER_USERS_CAN_SAVE_FILE": {
+            "description": "Id of those users You want to allow to Save Files"
+        },
+        "SHORTLINK_URL": {
+            "description": "Shortlink Domain URL To Use it to short Links. Example: tnshort.net"
+        },
+        "SHORTLINK_API": {
+            "description": "Shortlink API To Use it to short Links. Example: tnsh45ort123shor6789"
+        },
+        "LOG_CHANNEL": {
+            "description": "Logs Channel ID for some Tracking XD. Example: -100123456789"
+        }
+    },
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "eco"
+        }
+    }
+}
